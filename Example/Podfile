@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GreetSolutions_Example' do
+  pod 'GreetSolutions', :path => '../'
+
+  target 'GreetSolutions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
