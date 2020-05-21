@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'GreetSolutions'
-    s.version          = '0.1.0'
+    s.version          = '1.0.0'
     s.summary          = 'Library to recongnize people'
     
     # This description is used to generate tags and improve search results.

@@ -15,6 +15,11 @@
 		60E13B03DFE7500E0EBA64386BE213F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		81725665645A3C32FF9BA37858E59B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A35A1DD1BEEC60E69B19D5A6F4F819ED /* Pods-GreetSolutions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA95D5FB60778196A0C461E6F0217F0 /* Pods-GreetSolutions_Example-dummy.m */; };
+		A83072CD24763D3F009A16E6 /* SSIDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072CC24763D3F009A16E6 /* SSIDHelper.swift */; };
+		A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072CE24763D7D009A16E6 /* SendToCloud.swift */; };
+		A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D024763D9F009A16E6 /* SendToRouter.swift */; };
+		A83072D324763DC6009A16E6 /* httpRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D224763DC6009A16E6 /* httpRequestHelper.swift */; };
+		A83072D524763DF1009A16E6 /* BluetoothRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */; };
 		B233753BB5B85473EA9001D5D8B60C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		CC005AC6841B8C0A35E95B0EEF2422EC /* Pods-GreetSolutions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D9E8DF26C4913BBC67A7A658F3198B /* Pods-GreetSolutions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -37,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		178C8076658FD3B0D64F90BFD2C22703 /* Pods_GreetSolutions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GreetSolutions_Tests.framework; path = "Pods-GreetSolutions_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		178C8076658FD3B0D64F90BFD2C22703 /* Pods_GreetSolutions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreetSolutions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5C71A1B31F27CB4CB9778FF290EC51 /* Pods-GreetSolutions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		224320EB044FEF9AA8F6575BE368CCE2 /* Pods-GreetSolutions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -46,17 +51,22 @@
 		43D9E8DF26C4913BBC67A7A658F3198B /* Pods-GreetSolutions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GreetSolutions_Example-umbrella.h"; sourceTree = "<group>"; };
 		4758360EDDA620E161B28DCD18DA102E /* Pods-GreetSolutions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GreetSolutions_Tests-dummy.m"; sourceTree = "<group>"; };
 		5BA95D5FB60778196A0C461E6F0217F0 /* Pods-GreetSolutions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GreetSolutions_Example-dummy.m"; sourceTree = "<group>"; };
-		5C337BC39ADB2B15D95BF00F2E7715F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		60E8AD1E97CCEB3BA8DE646915A7FE85 /* GreetSolutions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GreetSolutions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5C337BC39ADB2B15D95BF00F2E7715F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		60E8AD1E97CCEB3BA8DE646915A7FE85 /* GreetSolutions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GreetSolutions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		68F7EE62EDE1617465923A82EE9AAC8C /* Pods-GreetSolutions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6E0A7558749E2CB62DD289C836F409A3 /* Pods-GreetSolutions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7DC2AE0B7091ECAFA8ED35FF7AFF0D30 /* Pods-GreetSolutions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GreetSolutions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		897D2E1D94482D186EEB5AA910E1A9CF /* Pods-GreetSolutions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GreetSolutions_Tests.modulemap"; sourceTree = "<group>"; };
 		9764888785B462CCB6AB5453D29DAE6E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GreetSolutions/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		9ACB4E52E3A79B6DEC60DD999B2BFDBA /* Pods-GreetSolutions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9CFFDEE74365F2F925D02470A1A560F5 /* GreetSolutions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GreetSolutions.framework; path = GreetSolutions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CFFDEE74365F2F925D02470A1A560F5 /* GreetSolutions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GreetSolutions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFBF68D593F6607EA5C30088A0A1C77 /* Pods-GreetSolutions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A83072CC24763D3F009A16E6 /* SSIDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSIDHelper.swift; path = GreetSolutions/Classes/SSIDHelper.swift; sourceTree = "<group>"; };
+		A83072CE24763D7D009A16E6 /* SendToCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToCloud.swift; path = GreetSolutions/Classes/SendToCloud.swift; sourceTree = "<group>"; };
+		A83072D024763D9F009A16E6 /* SendToRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToRouter.swift; path = GreetSolutions/Classes/SendToRouter.swift; sourceTree = "<group>"; };
+		A83072D224763DC6009A16E6 /* httpRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = httpRequestHelper.swift; path = GreetSolutions/Classes/httpRequestHelper.swift; sourceTree = "<group>"; };
+		A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BluetoothRecognition.swift; path = GreetSolutions/Classes/BluetoothRecognition.swift; sourceTree = "<group>"; };
 		A83D8CDCC3D8E58645B108F541765224 /* GreetSolutions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GreetSolutions.modulemap; sourceTree = "<group>"; };
 		B55D523850E050335C76CB14974DE998 /* GreetSolutions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GreetSolutions-umbrella.h"; sourceTree = "<group>"; };
 		B77385E2F6E1EF6445AC833C986A40CA /* Pods-GreetSolutions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GreetSolutions_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -64,10 +74,10 @@
 		C588B9E3ECE4ED3938E47E3281CAEA02 /* Pods-GreetSolutions_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Tests-Info.plist"; sourceTree = "<group>"; };
 		C6797237996452C020F30F19998C5BF0 /* Pods-GreetSolutions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GreetSolutions_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CA895CD7F91A35F8F291735075FCA045 /* GreetSolutions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GreetSolutions.xcconfig; sourceTree = "<group>"; };
-		DB48AE2D901703E11E582676BF9AA478 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DB48AE2D901703E11E582676BF9AA478 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DC504D8F42C08E3F4582683CA52D184A /* GreetSolutions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GreetSolutions-prefix.pch"; sourceTree = "<group>"; };
 		E498455CF6C56409FE2F08615B5493F8 /* GreetSolutions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GreetSolutions-Info.plist"; sourceTree = "<group>"; };
-		EFC2AE513D10FA512020774FFC50856E /* Pods_GreetSolutions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GreetSolutions_Example.framework; path = "Pods-GreetSolutions_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC2AE513D10FA512020774FFC50856E /* Pods_GreetSolutions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreetSolutions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41D777F604927B6C2792D6234A15A79 /* Pods-GreetSolutions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GreetSolutions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +226,11 @@
 				9764888785B462CCB6AB5453D29DAE6E /* ReplaceMe.swift */,
 				6FDB98DF0E7B49AB8FA787257737748A /* Pod */,
 				CD6EA5BBDEA471C3323CD1D62C321AE9 /* Support Files */,
+				A83072CC24763D3F009A16E6 /* SSIDHelper.swift */,
+				A83072CE24763D7D009A16E6 /* SendToCloud.swift */,
+				A83072D024763D9F009A16E6 /* SendToRouter.swift */,
+				A83072D224763DC6009A16E6 /* httpRequestHelper.swift */,
+				A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */,
 			);
 			name = GreetSolutions;
 			path = ../..;
@@ -381,8 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */,
 				1983AA4F28FFD6DE59CE7D255854DAD3 /* GreetSolutions-dummy.m in Sources */,
+				A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */,
+				A83072D324763DC6009A16E6 /* httpRequestHelper.swift in Sources */,
+				A83072D524763DF1009A16E6 /* BluetoothRecognition.swift in Sources */,
 				37CF01CE77590CC97C48EB4A3534BCF7 /* ReplaceMe.swift in Sources */,
+				A83072CD24763D3F009A16E6 /* SSIDHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,8 +642,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
