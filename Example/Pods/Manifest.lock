@@ -1,0 +1,16 @@
+PODS:
+  - GreetSolutions (0.1.0)
+
+DEPENDENCIES:
+  - GreetSolutions (from `../`)
+
+EXTERNAL SOURCES:
+  GreetSolutions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GreetSolutions: 81276eb816a63adcbdc7cd82d58a1e8998824c3d
+
+PODFILE CHECKSUM: a74a0519924d9a00a2325bb55fa1f892e709bb81
+
+COCOAPODS: 1.8.4

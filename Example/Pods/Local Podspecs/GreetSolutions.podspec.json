@@ -1,0 +1,22 @@
+{
+  "name": "GreetSolutions",
+  "version": "0.1.0",
+  "summary": "A short description of GreetSolutions.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/fherdoiza/GreetSolutions",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "fherdoiza": "yoder.macasg@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/fherdoiza/GreetSolutions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GreetSolutions/Classes/**/*"
+}
