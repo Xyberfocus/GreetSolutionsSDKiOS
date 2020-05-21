@@ -8,9 +8,9 @@
 import PromiseKit
 import Foundation
 
-class SendToCloud{
+public class SendToCloud{
     let httpRequestUser = httpRequestHelper()
-    func sendUniqueIdtoServer(userName : String , userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
+    public func sendUniqueIdtoServer(userName : String , userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
         return Promise<NSDictionary> { seal in
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
             let urlAuthentification : String = "/User/"

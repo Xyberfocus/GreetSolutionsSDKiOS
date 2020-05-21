@@ -8,9 +8,9 @@
 import Foundation
 import PromiseKit
 
-class SendToRouter {
-   let httpRequestUser = httpRequestHelper()
-    func SendUniqueIdToLocalNetwork() -> Promise<NSDictionary>  {
+public class SendToRouter {
+   public let httpRequestUser = httpRequestHelper()
+    public func SendUniqueIdToLocalNetwork() -> Promise<NSDictionary>  {
       return Promise<NSDictionary> { seal in
         let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
         let urlString : String = "/post_uuid.php"

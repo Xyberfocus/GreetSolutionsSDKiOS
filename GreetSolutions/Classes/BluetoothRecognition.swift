@@ -9,8 +9,8 @@ import Foundation
 //import UserNotifications
 import EstimoteProximitySDK
 
-class BluetoothRecognition{
-    func StartBluetooth() {
+public class BluetoothRecognition{
+    public func StartBluetooth() {
         //Bluetooth account
         let router = SendToRouter()
         let estimoteCloudCredentials = CloudCredentials(appID: "xyberfocus-bluetooth-emf", appToken: "623ac796aed454de3d4b26c7672b225c")

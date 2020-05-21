@@ -8,14 +8,14 @@
 import UIKit
 import PromiseKit
 
-class httpRequestHelper {
+public class httpRequestHelper {
   
   let servidorIP = "https://groovy-facet-268019.appspot.com"
   let localServerIp = "http://10.10.10.1"
   var jsonResult : NSDictionary = [:]
   
   
-  func getRequest(urlStringGet :String)-> Promise<Any> {
+  public func getRequest(urlStringGet :String)-> Promise<Any> {
     return Promise<Any> { seal in
       let stringGet : String = String(servidorIP) + urlStringGet
       let urlGet = URL(string: stringGet)
@@ -35,7 +35,7 @@ class httpRequestHelper {
   }
   
   
-  func postRequest(urlStringPost : String , postParameters : Dictionary< String, String>) -> Promise<NSDictionary> {
+ public  func postRequest(urlStringPost : String , postParameters : Dictionary< String, String>) -> Promise<NSDictionary> {
     return Promise<NSDictionary> { seal in
       let stringPost : String = String(servidorIP) + urlStringPost
       let urlPost = URL(string: stringPost)
@@ -65,7 +65,7 @@ class httpRequestHelper {
   }
   
   
-  func localPostRequest(urlStringPost : String , postParameters : String) -> Promise<NSDictionary> {
+ public func localPostRequest(urlStringPost : String , postParameters : String) -> Promise<NSDictionary> {
     return Promise<NSDictionary> { seal in
       let stringPost : String = String(localServerIp) + urlStringPost
       let requestHeader : [String:String] = [ "Content-Type" : "application/x-www-form-urlencoded"]
@@ -97,7 +97,7 @@ class httpRequestHelper {
   
   
   
-  func getLocalRequest(urlStringGet :String)-> Promise<Any> {
+  public func getLocalRequest(urlStringGet :String)-> Promise<Any> {
     return Promise<Any> { seal in
       let stringGet : String = String(localServerIp) + urlStringGet
       let urlGet = URL(string: stringGet)
