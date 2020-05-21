@@ -8,8 +8,10 @@ import Foundation
 import PromiseKit
 
 public class SendToCloud{
+    public init() {}
     
     public static func sendUniqueIdtoServer(userName : String , userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
+        
         return Promise<NSDictionary> { seal in
             let servidorIP = "https://groovy-facet-268019.appspot.com"
             var jsonResult : NSDictionary = [:]

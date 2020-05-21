@@ -9,6 +9,9 @@ import Foundation
 import EstimoteProximitySDK
 
 public class BluetoothRecognition{
+    
+    public init() {}
+    
     public func StartBluetooth()-> Bool {
         let router = SendToRouter()
         var response : Bool = false
