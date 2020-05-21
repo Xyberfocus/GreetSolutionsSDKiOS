@@ -10,9 +10,10 @@ import PromiseKit
 public class SendToCloud{
     public init() {}
     
-    public static func sendUniqueIdtoServer(userName : String , userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
+    public static func sendUniqueIdtoServer(firstName : String , lastName : String ,userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
         
         return Promise<NSDictionary> { seal in
+            let userName : String = firstName + " " + lastName
             let servidorIP = "https://groovy-facet-268019.appspot.com"
             var jsonResult : NSDictionary = [:]
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!

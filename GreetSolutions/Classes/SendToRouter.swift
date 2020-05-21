@@ -10,11 +10,8 @@ import PromiseKit
 
 public class SendToRouter {
     public init() {}
-    
-    
-    public let httpRequestUser = httpRequestHelper()
-    public static func SendUniqueIdToLocalNetwork() -> Promise<NSDictionary>  {
-        return Promise<NSDictionary> { seal in
+    public static func SendUniqueIdToLocalNetwork() -> Promise<String>  {
+        return Promise<String> { seal in
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
             let localServerIp = "http://10.10.10.1"
             var jsonResult : NSDictionary = [:]
@@ -36,7 +33,8 @@ public class SendToRouter {
                     if let content = datos {
                         do{
                             let jsonResult = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                            seal.fulfill(jsonResult)
+                            let message = "Greet Solutions Conexion Success"
+                            seal.fulfill(message)
                         }catch{
                             let errorPostRequest = NSError(domain: " POST Failed Request", code: 101, userInfo: [NSLocalizedDescriptionKey: " POST Failed Request" ])
                             seal.reject(errorPostRequest)
