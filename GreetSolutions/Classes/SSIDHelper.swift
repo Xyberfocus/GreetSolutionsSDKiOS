@@ -14,7 +14,7 @@ import CoreLocation
 
 public class SSIDHelper{
   
-   func startWifi() {
+   public func startWifi() {
     let defaults = UserDefaults.standard
     let userNumberSerial : String =  (UIDevice.current.identifierForVendor?.uuidString)!
     defaults.set(userNumberSerial, forKey: "gsId")
@@ -36,7 +36,7 @@ public class SSIDHelper{
        }
   }
   
-   func connectSSIDWifi(ssid: String, passphrase: String)  {
+   public func connectSSIDWifi(ssid: String, passphrase: String)  {
     
     let hotspotConfig = NEHotspotConfiguration(ssid: ssid, passphrase: passphrase, isWEP: false)
     
