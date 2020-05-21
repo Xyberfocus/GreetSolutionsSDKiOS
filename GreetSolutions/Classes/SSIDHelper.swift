@@ -24,27 +24,22 @@ public class SSIDHelper{
         let userNumberSerial : String =  (UIDevice.current.identifierForVendor?.uuidString)!
         defaults.set(userNumberSerial, forKey: "gsId")
         var session : Int
-        
-        
-        
-        
-              let hotspotConfig = NEHotspotConfiguration(ssid: "meshlium0534", passphrase: "xyber2020focus", isWEP: false)
-              
-              NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in
-                  if let error = error {
-                      print("error = ",error)
-                  }
-                  else {
-                      print("Success WIFI!")
-                      
-                  }
-              }
-        
         if defaults.integer(forKey: "sessionNumber") == 0 {
             defaults.set("no id", forKey: "userId")
             session = 1
             defaults.set(session, forKey: "sessionNumber")
             defaults.set(false, forKey: "UserRecognized")
+            let hotspotConfig = NEHotspotConfiguration(ssid: "meshlium0534", passphrase: "xyber2020focus", isWEP: false)
+                       
+                       NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in
+                           if let error = error {
+                               print("error = ",error)
+                           }
+                           else {
+                               print("Success WIFI!")
+                               
+                           }
+                       }
       
             defaults.set(false, forKey: "UserRegsiter")
             return true
