@@ -7,10 +7,16 @@
 
 import Foundation
 import EstimoteProximitySDK
+import CoreLocation
 
 public class BluetoothRecognition{
     
+    
     public init() {}
+    
+    public var proximityObserver: ProximityObserver!
+    public var locationManager : CLLocationManager?
+    
     
     public static func StartBluetooth()-> Bool {
         let router = SendToRouter()

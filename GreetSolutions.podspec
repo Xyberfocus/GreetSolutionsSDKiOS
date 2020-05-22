@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'GreetSolutions'
-    s.version          = '1.1.6'
+    s.version          = '1.1.7'
     s.summary          = 'Library to recongnize people'
     
     # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     # }
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
-    s.frameworks = 'UIKit','NetworkExtension','CoreLocation'
+    s.frameworks = 'UIKit','NetworkExtension','CoreLocation','UserNotifications'
     s.dependency 'EstimoteProximitySDK'
     s.dependency 'PromiseKit', '~> 6.0'
    
