@@ -12,9 +12,11 @@ public class BluetoothRecognition{
     
     public init() {}
     
-    public func StartBluetooth()-> Bool {
+    public static func StartBluetooth()-> Bool {
         let router = SendToRouter()
         var response : Bool = false
+        
+        
         let estimoteCloudCredentials = CloudCredentials(appID: "xyberfocus-bluetooth-emf", appToken: "623ac796aed454de3d4b26c7672b225c")
         let proximityObserver = ProximityObserver(credentials: estimoteCloudCredentials, onError: { error in
             print("BLE Observer error: \(error)")
