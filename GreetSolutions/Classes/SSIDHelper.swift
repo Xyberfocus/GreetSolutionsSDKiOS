@@ -27,9 +27,6 @@ public class SSIDHelper{
             defaults.set("no id", forKey: "userId")
             session = 1
             defaults.set(session, forKey: "sessionNumber")
-            defaults.set(false, forKey: "UserRecognized")
-            
-            
             let hotspotConfig = NEHotspotConfiguration(ssid: "meshlium0534", passphrase: "xyber2020focus", isWEP: false)
                        
                        NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in
@@ -42,7 +39,6 @@ public class SSIDHelper{
                            }
                        }
       
-            defaults.set(false, forKey: "UserRegsiter")
             return true
             
         }else{

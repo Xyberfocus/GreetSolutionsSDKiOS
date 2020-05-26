@@ -25,18 +25,8 @@ public class BluetoothRecognition{
         let rango = ProximityRange(desiredMeanTriggerDistance: 3.0)
         let zone = ProximityZone(tag: "holahola-f8u", range:rango!)
         zone.onEnter = { context in
-//            if UserDefaults.standard.bool(forKey: "UserRecognized"){
-//                print("El usuario ya fue reconocido no mando infomación")
-//            }else{
-//                UserDefaults.standard.set(true, forKey: "UserRecognized")
-//                if UserDefaults.standard.bool(forKey: "UserRegsiter"){
-                    
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: "greetSolutionsBluetooth"), object: nil)
-//                }else{
-//                    print("No esta registrado todavía ")
-//
-//                }
-//            }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "greetSolutionsBluetooth"), object: nil)
+            print("El celular fue reconocido")
         }
         proximityObserver.startObserving([zone])
         
