@@ -15,20 +15,21 @@ import CoreLocation
 public class SSIDHelper{
     
     public init() {}
-    //    public static func aylin() -> String {
-    //        return "Aylin te amo"
-    //    }
+
     
     public static func startWifi() -> Bool {
         let defaults = UserDefaults.standard
         let userNumberSerial : String =  (UIDevice.current.identifierForVendor?.uuidString)!
         defaults.set(userNumberSerial, forKey: "gsId")
         var session : Int
+        
         if defaults.integer(forKey: "sessionNumber") == 0 {
             defaults.set("no id", forKey: "userId")
             session = 1
             defaults.set(session, forKey: "sessionNumber")
             defaults.set(false, forKey: "UserRecognized")
+            
+            
             let hotspotConfig = NEHotspotConfiguration(ssid: "meshlium0534", passphrase: "xyber2020focus", isWEP: false)
                        
                        NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in

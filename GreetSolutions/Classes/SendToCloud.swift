@@ -13,6 +13,7 @@ public class SendToCloud{
     public static func sendUniqueIdtoServer(firstName : String , lastName : String ,userPhone : String, userEmail : String) -> Promise<NSDictionary>  {
         
         return Promise<NSDictionary> { seal in
+            
             let userName : String = firstName + " " + lastName
             let servidorIP = "https://groovy-facet-268019.appspot.com"
             var jsonResult : NSDictionary = [:]

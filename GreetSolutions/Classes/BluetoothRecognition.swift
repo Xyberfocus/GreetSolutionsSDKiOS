@@ -7,41 +7,61 @@
 
 import Foundation
 import EstimoteProximitySDK
-import CoreLocation
+
 
 public class BluetoothRecognition{
     
     
     public init() {}
+    public static var proximityObserver: ProximityObserver!
     
-    public var proximityObserver: ProximityObserver!
-    public var locationManager : CLLocationManager?
+    // debe recibir la referencia que le llama
+    //inyección de dependencias
+    // delegtes
+    
+    
     
     
     public static func StartBluetooth()-> Bool {
-        let router = SendToRouter()
+        
         var response : Bool = false
         
         
         let estimoteCloudCredentials = CloudCredentials(appID: "xyberfocus-bluetooth-emf", appToken: "623ac796aed454de3d4b26c7672b225c")
-        let proximityObserver = ProximityObserver(credentials: estimoteCloudCredentials, onError: { error in
+        //BLE Observer
+        proximityObserver = ProximityObserver(credentials: estimoteCloudCredentials, onError: { error in
             print("BLE Observer error: \(error)")
         })
+        
         let rango = ProximityRange(desiredMeanTriggerDistance: 3.0)
         let zone = ProximityZone(tag: "holahola-f8u", range:rango!)
         zone.onEnter = { context in
-            if UserDefaults.standard.bool(forKey: "UserRecognized"){
-                print("El usuario ya fue reconocido no mando infomación")
-                response =  false
-            }else{
-                UserDefaults.standard.set(true, forKey: "UserRecognized")
-                if UserDefaults.standard.bool(forKey: "UserRegsiter"){
-                    response = true
-                }else{
-                    print("No esta registrado todavía ")
-                    response = false
-                }
-            }
+            
+          //  NotificationCenter.default.post(name: "yoder3", object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "yoder3"), object: nil)
+            
+//
+//            if UserDefaults.standard.bool(forKey: "UserRecognized"){
+//
+//                NotificationCenter.default.post(name: "yoder", object: nil)
+//                print("El usuario ya fue reconocido no mando infomación")
+//                response = false
+//            }else{
+//                UserDefaults.standard.set(true, forKey: "UserRecognized")
+//
+//
+//                NotificationCenter.default.post(name: "yoder2", object: nil)
+//
+//
+//
+//                if UserDefaults.standard.bool(forKey: "UserRegsiter"){
+//                    response = true
+//                    NotificationCenter.default.post(name: "yoder3", object: nil)
+//                }else{
+//                    print("No esta registrado todavía ")
+//                    response = false
+//                }
+//            }
         }
         proximityObserver.startObserving([zone])
         return response
