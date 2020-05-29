@@ -14,6 +14,7 @@
 		60E13B03DFE7500E0EBA64386BE213F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		81725665645A3C32FF9BA37858E59B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A35A1DD1BEEC60E69B19D5A6F4F819ED /* Pods-GreetSolutions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA95D5FB60778196A0C461E6F0217F0 /* Pods-GreetSolutions_Example-dummy.m */; };
+		A8252D692480BCBB00D1F3B3 /* NotificationGreetSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8252D682480BCBB00D1F3B3 /* NotificationGreetSolutions.swift */; };
 		A83072CD24763D3F009A16E6 /* SSIDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072CC24763D3F009A16E6 /* SSIDHelper.swift */; };
 		A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072CE24763D7D009A16E6 /* SendToCloud.swift */; };
 		A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D024763D9F009A16E6 /* SendToRouter.swift */; };
@@ -59,6 +60,7 @@
 		9CFFDEE74365F2F925D02470A1A560F5 /* GreetSolutions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GreetSolutions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFBF68D593F6607EA5C30088A0A1C77 /* Pods-GreetSolutions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A8252D682480BCBB00D1F3B3 /* NotificationGreetSolutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationGreetSolutions.swift; path = GreetSolutions/Classes/NotificationGreetSolutions.swift; sourceTree = "<group>"; };
 		A83072CC24763D3F009A16E6 /* SSIDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSIDHelper.swift; path = GreetSolutions/Classes/SSIDHelper.swift; sourceTree = "<group>"; };
 		A83072CE24763D7D009A16E6 /* SendToCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToCloud.swift; path = GreetSolutions/Classes/SendToCloud.swift; sourceTree = "<group>"; };
 		A83072D024763D9F009A16E6 /* SendToRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToRouter.swift; path = GreetSolutions/Classes/SendToRouter.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				A83072CE24763D7D009A16E6 /* SendToCloud.swift */,
 				A83072D024763D9F009A16E6 /* SendToRouter.swift */,
 				A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */,
+				A8252D682480BCBB00D1F3B3 /* NotificationGreetSolutions.swift */,
 			);
 			name = GreetSolutions;
 			path = ../..;
@@ -392,6 +395,7 @@
 			files = (
 				A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */,
 				1983AA4F28FFD6DE59CE7D255854DAD3 /* GreetSolutions-dummy.m in Sources */,
+				A8252D692480BCBB00D1F3B3 /* NotificationGreetSolutions.swift in Sources */,
 				A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */,
 				A83072D524763DF1009A16E6 /* BluetoothRecognition.swift in Sources */,
 				A83072CD24763D3F009A16E6 /* SSIDHelper.swift in Sources */,

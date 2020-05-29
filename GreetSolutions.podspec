@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'GreetSolutions'
-    s.version          = '1.1.21'
+    s.version          = '1.2.0'
     s.summary          = 'Library to recongnize people'
     
     # This description is used to generate tags and improve search results.
@@ -33,6 +33,7 @@ Pod::Spec.new do |s|
     
     s.source_files = 'GreetSolutions/Classes/**/*'
     
+    s.static_framework = true
     # s.resource_bundles = {
     #   'GreetSolutions' => ['GreetSolutions/Assets/*.png']
     # }
@@ -40,6 +41,7 @@ Pod::Spec.new do |s|
     # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit','NetworkExtension','CoreLocation','UserNotifications'
     s.dependency 'EstimoteProximitySDK'
+    s.dependency 'OneSignal', '>= 2.11.2', '< 3.0'
     s.dependency 'PromiseKit', '~> 6.0'
    
 end
