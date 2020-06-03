@@ -11,11 +11,10 @@ import PromiseKit
 public class SendToRouter {
     public init() {}
     public static func SendUniqueIdToLocalNetwork() -> Promise<String>  {
-        return Promise<String> { seal in
+        return Promise<NSDictionary> { seal in
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
-            let localServerIp = "http://10.10.10.1"
-            var jsonResult : NSDictionary = [:]
             let urlString : String = "/post_uuid.php"
+            let localServerIp = "http://10.10.10.1"
             let stringPost : String = String(localServerIp) + urlString
             let requestHeader : [String:String] = [ "Content-Type" : "application/x-www-form-urlencoded"]
             var requestBodyComponents = URLComponents()
@@ -26,19 +25,20 @@ public class SendToRouter {
             request.httpBody = requestBodyComponents.query?.data(using: .utf8)
             _ = URLSession.shared.dataTask(with: request){(datos,response,error) in
                 if error != nil{
-                    print("Error POST")
-                    let errorPost = NSError(domain: " POST Failed Network", code: 100, userInfo: [NSLocalizedDescriptionKey: " POST Failed Network" ])
+                    let errorPost = NSError(domain: "Error POST Router", code: 001)
+                    print("Greet Solution Post Router error: \(errorPost)")
                     seal.reject(errorPost)
                 }else{
-                    if let content = datos {
-                        do{
-                            let jsonResult = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                            let message = "Greet Solutions Conexion Success"
-                            seal.fulfill(message)
-                        }catch{
-                            let errorPostRequest = NSError(domain: " POST Failed Request", code: 101, userInfo: [NSLocalizedDescriptionKey: " POST Failed Request" ])
-                            seal.reject(errorPostRequest)
-                        }
+                    let htmlContent : String = NSString(data: datos!, encoding: String.Encoding.utf8.rawValue)! as String
+                    if htmlContent == "OK\n"{
+                        let message = "Send Success to Router"
+                        let respuesta = ["message" : message] as NSDictionary
+                        seal.fulfill(respuesta)
+                        print("Greet Solution Post Router message: \(message)")
+                    }else{
+                        let errorPost = NSError(domain: "Error parameters POST Router", code: 002)
+                        print("Greet Solution Post Router error: \(errorPost)")
+                        seal.reject(errorPost)
                     }
                 }
             }.resume()
