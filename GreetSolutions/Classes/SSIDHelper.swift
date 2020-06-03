@@ -15,7 +15,7 @@ import CoreLocation
 public class SSIDHelper{
     
     public init() {}
-
+    
     
     public static func startWifi() -> Bool {
         let defaults = UserDefaults.standard
@@ -24,21 +24,23 @@ public class SSIDHelper{
         var session : Int
         
         if defaults.integer(forKey: "sessionNumber") == 0 {
+            UserDefaults.standard.set(false, forKey: "isUserRecognized")
+            
             defaults.set("no id", forKey: "userId")
             session = 1
             defaults.set(session, forKey: "sessionNumber")
             let hotspotConfig = NEHotspotConfiguration(ssid: "meshlium0534", passphrase: "xyber2020focus", isWEP: false)
-                       
-                       NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in
-                           if let error = error {
-                               print("error = ",error)
-                           }
-                           else {
-                               print("Success WIFI!")
-                               
-                           }
-                       }
-      
+            
+            NEHotspotConfigurationManager.shared.apply(hotspotConfig){ (error) in
+                if let error = error {
+                    print("error = ",error)
+                }
+                else {
+                    print("Success WIFI!")
+                    
+                }
+            }
+            
             return true
             
         }else{
