@@ -25,11 +25,18 @@ public class NotificationGreetSolution{
               NotificationCenter.default.post(name: Notification.Name(rawValue: "PushNotification"), object: nil)
               let payload: OSNotificationPayload = result!.notification.payload
               let additionalData = payload.additionalData
-              if let installationid : String = (additionalData?["macRouter"]as? String)!{
+
+            //   if let installationid : String = (additionalData?["macRouter"]as? String)!{
+            //     let macRouter = installationid
+            //     UserDefaults.standard.setValue(macRouter, forKey: "MacRouter")
+            //     print("MacRouter = \(macRouter)")
+            //   }
+
+                if let installationid = additionalData?["macRouter"] as? String {
                 let macRouter = installationid
                 UserDefaults.standard.setValue(macRouter, forKey: "MacRouter")
                 print("MacRouter = \(macRouter)")
-              }
+                }
             }
             
             
@@ -66,7 +73,7 @@ public class NotificationGreetSolution{
                 
                 
                 let servidorIP = "https://groovy-facet-268019.appspot.com"
-                var jsonResult : NSDictionary = [:]
+              //  var jsonResult : NSDictionary = [:]
                 let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
                 let urlAuthentification : String = "/MsgNotification/registerNotification/"
                 let jsonReq = ["uuid":UUIDUser, "answer":Response,"macRouter":MacRouter] as Dictionary
@@ -77,7 +84,8 @@ public class NotificationGreetSolution{
                 request.httpMethod = "POST"
                 let serial = try! JSONSerialization.data(withJSONObject: jsonReq, options: [])
                 request.httpBody = serial
-                _ = URLSession.shared.dataTask(with: request ,completionHandler: { (datos , response , error) -> Void in
+                URLSession.shared.dataTask(with: request ,completionHandler: { (datos , response , error) -> Void in
+//                _ = URLSession.shared.dataTask(with: request ,completionHandler: { (datos , response , error) -> Void in
                     if error != nil{
                         print("Error POST")
                         seal.reject(error!)

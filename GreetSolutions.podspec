@@ -25,10 +25,11 @@ Pod::Spec.new do |s|
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'greetSolutions' => 'xyberfocus@gmail.com' }
-    s.source           = { :git => 'https://github.com/Xyberfocus/GreetSolutionsSDKiOS.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-    
-    s.ios.deployment_target = '11.0'
+    s.source = { 
+      :git => 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git', 
+        :tag => s.version 
+    }
+    s.ios.deployment_target = '12.0'
     s.swift_version = '4.0'
     
     s.source_files = 'GreetSolutions/Classes/**/*'

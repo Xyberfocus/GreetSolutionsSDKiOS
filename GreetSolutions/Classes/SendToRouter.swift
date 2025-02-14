@@ -11,7 +11,7 @@ import PromiseKit
 public class SendToRouter {
     public init() {}
     public static func SendUniqueIdToLocalNetwork() -> Promise<String>  {
-        return Promise<NSDictionary> { seal in
+        return Promise<String> { seal in
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
             let urlString : String = "/post_uuid.php"
             let localServerIp = "http://10.10.10.1"
@@ -23,7 +23,7 @@ public class SendToRouter {
             request.httpMethod = "POST"
             request.allHTTPHeaderFields = requestHeader
             request.httpBody = requestBodyComponents.query?.data(using: .utf8)
-            _ = URLSession.shared.dataTask(with: request){(datos,response,error) in
+            URLSession.shared.dataTask(with: request){(datos,response,error) in
                 if error != nil{
                     let errorPost = NSError(domain: "Error POST Router", code: 001)
                     print("Greet Solution Post Router error: \(errorPost)")
@@ -32,8 +32,8 @@ public class SendToRouter {
                     let htmlContent : String = NSString(data: datos!, encoding: String.Encoding.utf8.rawValue)! as String
                     if htmlContent == "OK\n"{
                         let message = "Send Success to Router"
-                        let respuesta = ["message" : message] as NSDictionary
-                        seal.fulfill(respuesta)
+                        // Eliminamos la creación del NSDictionary y enviamos directamente el mensaje
+                        seal.fulfill(message)
                         print("Greet Solution Post Router message: \(message)")
                     }else{
                         let errorPost = NSError(domain: "Error parameters POST Router", code: 002)
@@ -45,9 +45,3 @@ public class SendToRouter {
         }
     }
 }
-
-
-
-
-
-
