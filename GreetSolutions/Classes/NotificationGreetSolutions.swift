@@ -16,21 +16,13 @@ public class NotificationGreetSolution{
         public static  func StartNotificationsGreetSolutions()  {
         
             //Función cuando recibo la notificación Push
-            let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
-              
+            let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in              
             }
-            
             //Función cuando presiono la notificación Push
             let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
               NotificationCenter.default.post(name: Notification.Name(rawValue: "PushNotification"), object: nil)
               let payload: OSNotificationPayload = result!.notification.payload
               let additionalData = payload.additionalData
-
-            //   if let installationid : String = (additionalData?["macRouter"]as? String)!{
-            //     let macRouter = installationid
-            //     UserDefaults.standard.setValue(macRouter, forKey: "MacRouter")
-            //     print("MacRouter = \(macRouter)")
-            //   }
 
                 if let installationid = additionalData?["macRouter"] as? String {
                 let macRouter = installationid
@@ -38,14 +30,8 @@ public class NotificationGreetSolution{
                 print("MacRouter = \(macRouter)")
                 }
             }
-            
-            
             //START OneSignal initialization code
             let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
-            
-            
-           
-            
             OneSignal.initWithLaunchOptions(onesignalInitSettings,
                                                appId: "1a43ef0e-2415-45e0-a6c9-33b852e3b69d",
                                                handleNotificationReceived: notificationReceivedBlock,
@@ -62,18 +48,12 @@ public class NotificationGreetSolution{
             
             
         }
-    
-    
-    
-    
-    
-    
+
         public static func sendContactNotification(Response : String, MacRouter : String) -> Promise<NSDictionary>  {
             return Promise<NSDictionary> { seal in
                 
                 
                 let servidorIP = "https://groovy-facet-268019.appspot.com"
-              //  var jsonResult : NSDictionary = [:]
                 let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
                 let urlAuthentification : String = "/MsgNotification/registerNotification/"
                 let jsonReq = ["uuid":UUIDUser, "answer":Response,"macRouter":MacRouter] as Dictionary
@@ -85,7 +65,6 @@ public class NotificationGreetSolution{
                 let serial = try! JSONSerialization.data(withJSONObject: jsonReq, options: [])
                 request.httpBody = serial
                 URLSession.shared.dataTask(with: request ,completionHandler: { (datos , response , error) -> Void in
-//                _ = URLSession.shared.dataTask(with: request ,completionHandler: { (datos , response , error) -> Void in
                     if error != nil{
                         print("Error POST")
                         seal.reject(error!)
