@@ -12,46 +12,40 @@ import OneSignal
 
 public class NotificationGreetSolution{
     
-      public init() {}
+       public init() {}
         public static  func StartNotificationsGreetSolutions()  {
         
+            //START OneSignal initialization code
+            OneSignal.initWithLaunchOptions(nil)
+            OneSignal.setAppId("1a43ef0e-2415-45e0-a6c9-33b852e3b69d")
+            
             //Función cuando recibo la notificación Push
-            let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in              
+            OneSignal.setNotificationWillShowInForegroundHandler { notification, completionHandler in
+                completionHandler(notification)
             }
+            
             //Función cuando presiono la notificación Push
-            let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
-              NotificationCenter.default.post(name: Notification.Name(rawValue: "PushNotification"), object: nil)
-              let payload: OSNotificationPayload = result!.notification.payload
-              let additionalData = payload.additionalData
-
-                if let installationid = additionalData?["macRouter"] as? String {
-                let macRouter = installationid
-                UserDefaults.standard.setValue(macRouter, forKey: "MacRouter")
-                print("MacRouter = \(macRouter)")
+            OneSignal.setNotificationOpenedHandler { result in
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "PushNotification"), object: nil)
+                
+                if let additionalData = result.notification.additionalData,
+                   let macRouter = additionalData["macRouter"] as? String {
+                    UserDefaults.standard.setValue(macRouter, forKey: "MacRouter")
+                    print("MacRouter = \(macRouter)")
                 }
             }
-            //START OneSignal initialization code
-            let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
-            OneSignal.initWithLaunchOptions(onesignalInitSettings,
-                                               appId: "1a43ef0e-2415-45e0-a6c9-33b852e3b69d",
-                                               handleNotificationReceived: notificationReceivedBlock,
-                                               handleNotificationAction: notificationOpenedBlock,
-                                               settings: onesignalInitSettings)
             
-            OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
             let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
-            OneSignal.sendTags(["user_id": UUIDUser])
+            OneSignal.sendTag("user_id", value: UUIDUser)
+            
+            // Request push notification permission
             OneSignal.promptForPushNotifications(userResponse: { accepted in
-              print("User accepted notifications: \(accepted)")
+                print("User accepted notifications: \(accepted)")
             })
-            
-            
-            
         }
-
+        
         public static func sendContactNotification(Response : String, MacRouter : String) -> Promise<NSDictionary>  {
             return Promise<NSDictionary> { seal in
-                
                 
                 let servidorIP = "https://groovy-facet-268019.appspot.com"
                 let UUIDUser : String =  (UserDefaults.standard.string(forKey: "gsId"))!
