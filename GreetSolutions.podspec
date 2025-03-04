@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GreetSolutions'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'Library to recongnize people'
   
   # This description is used to generate tags and improve search results.
@@ -22,12 +22,12 @@ Pod::Spec.new do |s|
   TODO: Install the library of Greet Solutions to get information about customers that enter your buildings. Using our code an our hardware, you can access information to your visitors.
   DESC
   
-  s.homepage         = 'https://github.com/Xyberfocus/GreetSolutionsSDKiOS.git'
+  s.homepage         = 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'greetSolutions' => 'xyberfocus@gmail.com' }
   s.source = { 
-    :git => 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git', 
+    :git => 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git', 
       :tag => s.version 
   }
   s.ios.deployment_target = '12.0'
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit','NetworkExtension','CoreLocation','UserNotifications'
   s.dependency 'EstimoteProximitySDK'
-  s.dependency 'OneSignal', '>= 3.0', '< 4.0'
+  # s.dependency 'OneSignal', '>= 3.0', '< 4.0'
   s.dependency 'PromiseKit', '~> 6.0'
  
   s.pod_target_xcconfig = {
