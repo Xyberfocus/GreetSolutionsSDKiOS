@@ -11,6 +11,8 @@ Pod::Spec.new do |s|
   s.name             = 'GreetSolutions'
   s.version          = '1.2.2'
   s.summary          = 'Library to recongnize people'
+
+  s.platform = :ios, '12.0'
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -41,10 +43,13 @@ Pod::Spec.new do |s|
   # }
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.source_files = 'GreetSolutions/Classes/**/*'
+  s.exclude_files = 'GreetSolutions/Classes/NotificationGreetSolutions.swift', 'GreetSolutions/Classes/NotificationGreetSolution.swift', 'GreetSolutions/Classes/BluetoothRecognition.swift'
+
   s.frameworks = 'UIKit','NetworkExtension','CoreLocation','UserNotifications'
-  s.dependency 'EstimoteProximitySDK'
+  # s.dependency 'EstimoteProximitySDK'
   # s.dependency 'OneSignal', '>= 3.0', '< 4.0'
-  s.dependency 'PromiseKit', '~> 6.0'
+  s.dependency 'PromiseKit', '~> 8.2'
  
   s.pod_target_xcconfig = {
     'IPHONEOS_DEPLOYMENT_TARGET' => '12.0',

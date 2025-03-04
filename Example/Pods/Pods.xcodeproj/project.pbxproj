@@ -19,6 +19,7 @@
 		A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072CE24763D7D009A16E6 /* SendToCloud.swift */; };
 		A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D024763D9F009A16E6 /* SendToRouter.swift */; };
 		A83072D524763DF1009A16E6 /* BluetoothRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */; };
+		A8BC4EE52D77BCDF009A04AA /* GreetSolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC4EE42D77BCCF009A04AA /* GreetSolutions.swift */; };
 		B233753BB5B85473EA9001D5D8B60C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		CC005AC6841B8C0A35E95B0EEF2422EC /* Pods-GreetSolutions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D9E8DF26C4913BBC67A7A658F3198B /* Pods-GreetSolutions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		A83072D024763D9F009A16E6 /* SendToRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToRouter.swift; path = GreetSolutions/Classes/SendToRouter.swift; sourceTree = "<group>"; };
 		A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BluetoothRecognition.swift; path = GreetSolutions/Classes/BluetoothRecognition.swift; sourceTree = "<group>"; };
 		A83D8CDCC3D8E58645B108F541765224 /* GreetSolutions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GreetSolutions.modulemap; sourceTree = "<group>"; };
+		A8BC4EE42D77BCCF009A04AA /* GreetSolutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetSolutions.swift; sourceTree = "<group>"; };
 		B55D523850E050335C76CB14974DE998 /* GreetSolutions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GreetSolutions-umbrella.h"; sourceTree = "<group>"; };
 		B77385E2F6E1EF6445AC833C986A40CA /* Pods-GreetSolutions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GreetSolutions_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C262146A6A8D9B39D6449B9E777009B9 /* Pods-GreetSolutions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Example-Info.plist"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				6FDB98DF0E7B49AB8FA787257737748A /* Pod */,
 				CD6EA5BBDEA471C3323CD1D62C321AE9 /* Support Files */,
 				A83072CC24763D3F009A16E6 /* SSIDHelper.swift */,
+				A8BC4EE42D77BCCF009A04AA /* GreetSolutions.swift */,
 				A83072CE24763D7D009A16E6 /* SendToCloud.swift */,
 				A83072D024763D9F009A16E6 /* SendToRouter.swift */,
 				A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */,
@@ -396,6 +399,7 @@
 				A83072CF24763D7D009A16E6 /* SendToCloud.swift in Sources */,
 				1983AA4F28FFD6DE59CE7D255854DAD3 /* GreetSolutions-dummy.m in Sources */,
 				A8252D692480BCBB00D1F3B3 /* NotificationGreetSolutions.swift in Sources */,
+				A8BC4EE52D77BCDF009A04AA /* GreetSolutions.swift in Sources */,
 				A83072D124763D9F009A16E6 /* SendToRouter.swift in Sources */,
 				A83072D524763DF1009A16E6 /* BluetoothRecognition.swift in Sources */,
 				A83072CD24763D3F009A16E6 /* SSIDHelper.swift in Sources */,
@@ -504,7 +508,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GreetSolutions/GreetSolutions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GreetSolutions/GreetSolutions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(inherited) 12.0";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GreetSolutions/GreetSolutions.modulemap";
 				PRODUCT_MODULE_NAME = GreetSolutions;
@@ -724,7 +728,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GreetSolutions/GreetSolutions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GreetSolutions/GreetSolutions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(inherited) 12.0";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GreetSolutions/GreetSolutions.modulemap";
 				PRODUCT_MODULE_NAME = GreetSolutions;
