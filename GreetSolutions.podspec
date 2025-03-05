@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GreetSolutions'
-  s.version          = '1.2.2'
+  s.version          = '1.2.3'
   s.summary          = 'Library to recongnize people'
 
   s.platform = :ios, '12.0'
@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit','NetworkExtension','CoreLocation','UserNotifications'
   # s.dependency 'EstimoteProximitySDK'
   # s.dependency 'OneSignal', '>= 3.0', '< 4.0'
-  s.dependency 'PromiseKit', '~> 8.2'
+  s.dependency 'PromiseKit', '~> 8.0'
  
   s.pod_target_xcconfig = {
     'IPHONEOS_DEPLOYMENT_TARGET' => '12.0',

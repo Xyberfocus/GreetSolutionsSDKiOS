@@ -13,7 +13,7 @@ public class GreetSolutions{
     
     public static let shared = GreetSolutions()
     /// Default initializer
-    public init() {}
+
     
     // MARK: - Environment Configuration
        
@@ -39,8 +39,8 @@ public class GreetSolutions{
        /// Current environment setting
        private var currentEnvironment: Environment
        
-       /// Shared instance for easy access throughout the app
-       public static let shared = GreetSolutions()
+
+    
        
        /// Default initializer with production environment
        public init(environment: Environment = .production) {
@@ -75,6 +75,16 @@ public class GreetSolutions{
        public func getEnvironment() -> Environment {
            return currentEnvironment
        }
+    /**
+     Builds a complete endpoint URL using the current environment
+     
+     - Parameter path: The API path to append to the base URL
+     - Returns: The complete URL string
+     */
+    public func buildEndpoint(path: String) -> String {
+        return currentEnvironment.baseURL + path
+    }
+        
     /**
      Stores GreetSolutions credentials to UserDefaults
      

@@ -42,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		178C8076658FD3B0D64F90BFD2C22703 /* Pods_GreetSolutions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreetSolutions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5C71A1B31F27CB4CB9778FF290EC51 /* Pods-GreetSolutions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		224320EB044FEF9AA8F6575BE368CCE2 /* Pods-GreetSolutions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GreetSolutions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -67,7 +66,7 @@
 		A83072D024763D9F009A16E6 /* SendToRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendToRouter.swift; path = GreetSolutions/Classes/SendToRouter.swift; sourceTree = "<group>"; };
 		A83072D424763DF1009A16E6 /* BluetoothRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BluetoothRecognition.swift; path = GreetSolutions/Classes/BluetoothRecognition.swift; sourceTree = "<group>"; };
 		A83D8CDCC3D8E58645B108F541765224 /* GreetSolutions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GreetSolutions.modulemap; sourceTree = "<group>"; };
-		A8BC4EE42D77BCCF009A04AA /* GreetSolutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetSolutions.swift; sourceTree = "<group>"; };
+		A8BC4EE42D77BCCF009A04AA /* GreetSolutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GreetSolutions.swift; path = GreetSolutions/Classes/GreetSolutions.swift; sourceTree = "<group>"; };
 		B55D523850E050335C76CB14974DE998 /* GreetSolutions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GreetSolutions-umbrella.h"; sourceTree = "<group>"; };
 		B77385E2F6E1EF6445AC833C986A40CA /* Pods-GreetSolutions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GreetSolutions_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C262146A6A8D9B39D6449B9E777009B9 /* Pods-GreetSolutions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GreetSolutions_Example-Info.plist"; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		DB48AE2D901703E11E582676BF9AA478 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DC504D8F42C08E3F4582683CA52D184A /* GreetSolutions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GreetSolutions-prefix.pch"; sourceTree = "<group>"; };
 		E498455CF6C56409FE2F08615B5493F8 /* GreetSolutions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GreetSolutions-Info.plist"; sourceTree = "<group>"; };
-		EFC2AE513D10FA512020774FFC50856E /* Pods_GreetSolutions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreetSolutions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41D777F604927B6C2792D6234A15A79 /* Pods-GreetSolutions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GreetSolutions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				9CFFDEE74365F2F925D02470A1A560F5 /* GreetSolutions.framework */,
-				EFC2AE513D10FA512020774FFC50856E /* Pods_GreetSolutions_Example.framework */,
-				178C8076658FD3B0D64F90BFD2C22703 /* Pods_GreetSolutions_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,7 +296,6 @@
 			);
 			name = "Pods-GreetSolutions_Tests";
 			productName = "Pods-GreetSolutions_Tests";
-			productReference = 178C8076658FD3B0D64F90BFD2C22703 /* Pods_GreetSolutions_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D5DCA3450AAC1325B876A9414C324F16 /* Pods-GreetSolutions_Example */ = {
@@ -319,7 +314,6 @@
 			);
 			name = "Pods-GreetSolutions_Example";
 			productName = "Pods-GreetSolutions_Example";
-			productReference = EFC2AE513D10FA512020774FFC50856E /* Pods_GreetSolutions_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +325,7 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "_Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -756,7 +750,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "_Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
