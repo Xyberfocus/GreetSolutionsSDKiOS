@@ -24,14 +24,11 @@ Pod::Spec.new do |s|
   TODO: Install the library of Greet Solutions to get information about customers that enter your buildings. Using our code an our hardware, you can access information to your visitors.
   DESC
   
-  s.homepage         = 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git'
+  s.homepage = 'https://github.com/Xyberfocus/GreetSolutionsSDKiOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'greetSolutions' => 'xyberfocus@gmail.com' }
-  s.source = { 
-    :git => 'https://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@github.com/Xyberfocus/GreetSolutionsSDKiOS.git', 
-      :tag => s.version 
-  }
+  s.source = { :git => 'https://github.com/Xyberfocus/GreetSolutionsSDKiOS.git', :tag => s.version }
   s.ios.deployment_target = '12.0'
   s.swift_version = '5.3'
   
